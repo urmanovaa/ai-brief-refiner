@@ -1,0 +1,30 @@
+# =====================================================
+# AI Brief Refiner - Dependencies
+# =====================================================
+
+# Telegram Bot Framework
+aiogram>=3.4.0,<4.0.0
+
+# OpenAI API
+openai>=1.12.0
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# Audio processing (for voice messages)
+pydub>=0.25.0
+
+# HTTP client
+aiohttp>=3.9.0
+aiofiles>=23.2.0
+
+# Utilities
+tiktoken>=0.6.0
+
+# Document generation
+python-docx>=1.1.0
+
+# Note: ChromaDB removed due to compatibility issues on some platforms
+# Using simplified in-memory vector store instead
+# Uncomment below if you need full ChromaDB support:
+# chromadb>=0.5.0

@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  bot:
+    build: .
+    container_name: ai-brief-refiner
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      # Persist knowledge base data
+      - ./data:/app/data:ro
+      - ./chroma_db:/app/chroma_db
+      - ./temp:/app/temp
+    environment:
+      - PYTHONUNBUFFERED=1
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+# Optional: uncomment for development with auto-reload
+#   bot-dev:
+#     build: .
+#     container_name: ai-brief-refiner-dev
+#     env_file:
+#       - .env
+#     volumes:
+#       - .:/app
+#     command: ["python", "-u", "main.py"]
+

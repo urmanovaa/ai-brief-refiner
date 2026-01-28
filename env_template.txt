@@ -1,0 +1,50 @@
+# =====================================================
+# AI Brief Refiner - Environment Configuration
+# =====================================================
+# Скопируйте этот файл как .env и заполните значения:
+#   cp env_template.txt .env
+
+# === Telegram Bot ===
+# Получите токен у @BotFather
+TELEGRAM_BOT_TOKEN=your_telegram_bot_token_here
+
+# === Admin Users ===
+# Список user_id администраторов через запятую
+# Узнать свой user_id можно у @userinfobot
+ADMIN_IDS=123456789,987654321
+
+# === OpenAI API ===
+OPENAI_API_KEY=your_openai_api_key_here
+OPENAI_MODEL=gpt-4o
+OPENAI_VISION_MODEL=gpt-4o
+WHISPER_MODEL=whisper-1
+
+# === OpenAI Limits ===
+MAX_TOKENS=2000
+TEMPERATURE=0.7
+
+# === Retry Settings ===
+API_MAX_RETRIES=3
+API_RETRY_DELAY=1.0
+API_TIMEOUT=60
+
+# === Rate Limiting ===
+# Максимум сообщений за период
+RATE_LIMIT_MESSAGES=10
+RATE_LIMIT_WINDOW=60
+
+# === RAG / Vector Store ===
+CHROMA_PERSIST_DIR=./chroma_db
+CHROMA_COLLECTION_NAME=brief_refiner_docs
+RAG_CHUNK_SIZE=500
+RAG_CHUNK_OVERLAP=50
+RAG_TOP_K=3
+
+# === Paths ===
+DATA_DIR=./data
+TEMP_DIR=./temp
+
+# === Message Limits ===
+MAX_MESSAGE_LENGTH=4000
+MAX_HISTORY_LENGTH=20
+MAX_INPUT_LENGTH=10000
