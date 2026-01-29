@@ -155,6 +155,21 @@ bot/
 │   └── helpers.py          # Вспомогательные функции
 └── data/                   # Документы для RAG
 ```
+---
+
+## Screenshots
+
+### Start
+![Start](screenshots/start.png)
+
+### New brief
+![New brief](screenshots/new-brief.png)
+
+### Final document
+![Final document](screenshots/final-document.png)
+
+### Command menu
+![Command menu](screenshots/command-menu.png)
 
 ---
 
